@@ -9,7 +9,7 @@
 //  in the input, where it is in the ATN, the rule invocation stack,
 //  and what kind of problem occurred.
 
-var PredicateTransition = require('./../atn/Transition').PredicateTransition;
+import {PredicateTransition} from './../atn/Transition';
 
 function RecognitionException(params) {
 	Error.call(this);
@@ -161,9 +161,12 @@ function ParseCancellationException() {
 ParseCancellationException.prototype = Object.create(Error.prototype);
 ParseCancellationException.prototype.constructor = ParseCancellationException;
 
-exports.RecognitionException = RecognitionException;
-exports.NoViableAltException = NoViableAltException;
-exports.LexerNoViableAltException = LexerNoViableAltException;
-exports.InputMismatchException = InputMismatchException;
-exports.FailedPredicateException = FailedPredicateException;
-exports.ParseCancellationException = ParseCancellationException;
+
+export {
+    RecognitionException,
+    NoViableAltException,
+    LexerNoViableAltException,
+    InputMismatchException,
+    FailedPredicateException,
+    ParseCancellationException,
+}

@@ -438,14 +438,4 @@ function equalArrays(a, b)
     return true;
 };
 
-exports.Hash = Hash;
-exports.Set = Set;
-exports.Map = Map;
-exports.BitSet = BitSet;
-exports.AltDict = AltDict;
-exports.DoubleDict = DoubleDict;
-exports.hashStuff = hashStuff;
-exports.escapeWhitespace = escapeWhitespace;
-exports.arrayToString = arrayToString;
-exports.titleCase = titleCase;
-exports.equalArrays = equalArrays;
+export { Hash, Set, Map, BitSet, AltDict, DoubleDict, hashStuff, escapeWhitespace, arrayToString, titleCase, equalArrays };

@@ -26,13 +26,13 @@
 //  group values such as this aggregate.  The getters/setters are there to
 //  satisfy the superclass interface.
 
-var RuleContext = require('./RuleContext').RuleContext;
-var Tree = require('./tree/Tree');
+import {RuleContext} from './RuleContext';
+import * as Tree from './tree/Tree';
 var INVALID_INTERVAL = Tree.INVALID_INTERVAL;
 var TerminalNode = Tree.TerminalNode;
 var TerminalNodeImpl = Tree.TerminalNodeImpl;
 var ErrorNodeImpl = Tree.ErrorNodeImpl;
-var Interval = require("./IntervalSet").Interval;
+import {Interval} from './IntervalSet';
 
 function ParserRuleContext(parent, invokingStateNumber) {
 	parent = parent || null;
@@ -222,4 +222,4 @@ function InterpreterRuleContext(parent, invokingStateNumber, ruleIndex) {
 InterpreterRuleContext.prototype = Object.create(ParserRuleContext.prototype);
 InterpreterRuleContext.prototype.constructor = InterpreterRuleContext;
 
-exports.ParserRuleContext = ParserRuleContext;
+export { ParserRuleContext }

@@ -8,10 +8,9 @@
 //  It is the most abstract interface for all the trees used by ANTLR.
 ///
 
-var Token = require('./../Token').Token;
-var Interval = require('./../IntervalSet').Interval;
+import { Token } from './../Token';
+import { Interval } from './../IntervalSet';
 var INVALID_INTERVAL = new Interval(-1, -2);
-var Utils = require('../Utils.js');
 
 
 function Tree() {
@@ -219,12 +218,4 @@ ParseTreeWalker.prototype.exitRule = function(listener, r) {
 
 ParseTreeWalker.DEFAULT = new ParseTreeWalker();
 
-exports.RuleNode = RuleNode;
-exports.ErrorNode = ErrorNode;
-exports.TerminalNode = TerminalNode;
-exports.ErrorNodeImpl = ErrorNodeImpl;
-exports.TerminalNodeImpl = TerminalNodeImpl;
-exports.ParseTreeListener = ParseTreeListener;
-exports.ParseTreeVisitor = ParseTreeVisitor;
-exports.ParseTreeWalker = ParseTreeWalker;
-exports.INVALID_INTERVAL = INVALID_INTERVAL;
+export { RuleNode, ErrorNode, TerminalNode, ErrorNodeImpl, TerminalNodeImpl, ParseTreeListener, ParseTreeVisitor, ParseTreeWalker, INVALID_INTERVAL };

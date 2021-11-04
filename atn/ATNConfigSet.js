@@ -10,12 +10,13 @@
 // graph-structured stack.
 ///
 
-var ATN = require('./ATN').ATN;
-var Utils = require('./../Utils');
+import {ATN} from './ATN';
+import * as Utils from './../Utils';
+import * as Utils from './../Utils';
 var Hash = Utils.Hash;
 var Set = Utils.Set;
-var SemanticContext = require('./SemanticContext').SemanticContext;
-var merge = require('./../PredictionContext').merge;
+import { SemanticContext} from './SemanticContext';
+import {merge} from './../PredictionContext';
 
 function hashATNConfig(c) {
 	return c.hashCodeForConfigSet();
@@ -249,5 +250,4 @@ function OrderedATNConfigSet() {
 OrderedATNConfigSet.prototype = Object.create(ATNConfigSet.prototype);
 OrderedATNConfigSet.prototype.constructor = OrderedATNConfigSet;
 
-exports.ATNConfigSet = ATNConfigSet;
-exports.OrderedATNConfigSet = OrderedATNConfigSet;
+export { ATNConfigSet, OrderedATNConfigSet }

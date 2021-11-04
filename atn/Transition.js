@@ -16,11 +16,9 @@
 //  the states. We'll use the term Edge for the DFA to distinguish them from
 //  ATN transitions.</p>
 
-var Token = require('./../Token').Token;
-var Interval = require('./../IntervalSet').Interval;
-var IntervalSet = require('./../IntervalSet').IntervalSet;
-var Predicate = require('./SemanticContext').Predicate;
-var PrecedencePredicate = require('./SemanticContext').PrecedencePredicate;
+import { Token } from './../Token';
+import { Interval, IntervalSet } from './../IntervalSet';
+import {Predicate, PrecedencePredicate} from './SemanticContext';
 
 function Transition (target) {
     // The target of this transition.
@@ -302,15 +300,17 @@ PrecedencePredicateTransition.prototype.toString = function() {
 	return this.precedence + " >= _p";
 };
 
-exports.Transition = Transition;
-exports.AtomTransition = AtomTransition;
-exports.SetTransition = SetTransition;
-exports.NotSetTransition = NotSetTransition;
-exports.RuleTransition = RuleTransition;
-exports.ActionTransition = ActionTransition;
-exports.EpsilonTransition = EpsilonTransition;
-exports.RangeTransition = RangeTransition;
-exports.WildcardTransition = WildcardTransition;
-exports.PredicateTransition = PredicateTransition;
-exports.PrecedencePredicateTransition = PrecedencePredicateTransition;
-exports.AbstractPredicateTransition = AbstractPredicateTransition;
+export {
+    Transition,
+    AtomTransition,
+    SetTransition,
+    NotSetTransition,
+    RuleTransition,
+    ActionTransition,
+    EpsilonTransition,
+    RangeTransition,
+    WildcardTransition,
+    PredicateTransition,
+    PrecedencePredicateTransition,
+    AbstractPredicateTransition,
+}

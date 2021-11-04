@@ -3,10 +3,11 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-var Token = require('./../Token').Token;
-var ATN = require('./ATN').ATN;
-var ATNType = require('./ATNType').ATNType;
-var ATNStates = require('./ATNState');
+import { Token } from './../Token';
+import {ATN} from './ATN';
+import { ATNType} from './ATNType';
+import * as ATNState from './ATNState';
+import * as Transition from './Transition';
 var ATNState = ATNStates.ATNState;
 var BasicState = ATNStates.BasicState;
 var DecisionState = ATNStates.DecisionState;
@@ -22,7 +23,6 @@ var StarLoopEntryState = ATNStates.StarLoopEntryState;
 var PlusBlockStartState = ATNStates.PlusBlockStartState;
 var StarBlockStartState = ATNStates.StarBlockStartState;
 var BasicBlockStartState = ATNStates.BasicBlockStartState;
-var Transitions = require('./Transition');
 var Transition = Transitions.Transition;
 var AtomTransition = Transitions.AtomTransition;
 var SetTransition = Transitions.SetTransition;
@@ -35,7 +35,7 @@ var WildcardTransition = Transitions.WildcardTransition;
 var PredicateTransition = Transitions.PredicateTransition;
 var PrecedencePredicateTransition = Transitions.PrecedencePredicateTransition;
 var IntervalSet = require('./../IntervalSet').IntervalSet;
-var Interval = require('./../IntervalSet').Interval;
+import { Interval } from './../IntervalSet';
 var ATNDeserializationOptions = require('./ATNDeserializationOptions').ATNDeserializationOptions;
 var LexerActions = require('./LexerAction');
 var LexerActionType = LexerActions.LexerActionType;
@@ -675,4 +675,4 @@ ATNDeserializer.prototype.lexerActionFactory = function(type, data1, data2) {
 };
 
 
-exports.ATNDeserializer = ATNDeserializer;
+export { ATNDeserializer }

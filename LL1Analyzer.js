@@ -5,19 +5,14 @@
  */
 ///
 
-var Set = require('./Utils').Set;
-var BitSet = require('./Utils').BitSet;
-var Token = require('./Token').Token;
-var ATNConfig = require('./atn/ATNConfig').ATNConfig;
-var Interval = require('./IntervalSet').Interval;
-var IntervalSet = require('./IntervalSet').IntervalSet;
-var RuleStopState = require('./atn/ATNState').RuleStopState;
-var RuleTransition = require('./atn/Transition').RuleTransition;
-var NotSetTransition = require('./atn/Transition').NotSetTransition;
-var WildcardTransition = require('./atn/Transition').WildcardTransition;
-var AbstractPredicateTransition = require('./atn/Transition').AbstractPredicateTransition;
+import { Set, BitSet } from './Utils';
+import { Token } from './../Token';
+import {ATNConfig} from './atn/ATNConfig';
+import { IntervalSet } from './IntervalSet';
+import {RuleStopState} from './atn/ATNState';
+import {RuleTransition, NotSetTransition, WildcardTransition, WildcardTransition, AbstractPredicateTransition} from './atn/Transition';
 
-var pc = require('./PredictionContext');
+import * as pc from './PredictionContext';
 var predictionContextFromRuleContext = pc.predictionContextFromRuleContext;
 var PredictionContext = pc.PredictionContext;
 var SingletonPredictionContext = pc.SingletonPredictionContext;
@@ -195,5 +190,6 @@ LL1Analyzer.prototype._LOOK = function(s, stopState , ctx, look, lookBusy, calle
     }
 };
 
-exports.LL1Analyzer = LL1Analyzer;
+
+export { LL1Analyzer }
 

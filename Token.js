@@ -147,5 +147,4 @@ CommonToken.prototype.toString = function() {
 			this.line + ":" + this.column + "]";
 };
 
-exports.Token = Token;
-exports.CommonToken = CommonToken;
+export { Token, CommonToken };

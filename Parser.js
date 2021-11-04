@@ -3,14 +3,12 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-var Token = require('./Token').Token;
-var ParseTreeListener = require('./tree/Tree').ParseTreeListener;
-var Recognizer = require('./Recognizer').Recognizer;
-var DefaultErrorStrategy = require('./error/ErrorStrategy').DefaultErrorStrategy;
-var ATNDeserializer = require('./atn/ATNDeserializer').ATNDeserializer;
-var ATNDeserializationOptions = require('./atn/ATNDeserializationOptions').ATNDeserializationOptions;
-var TerminalNode = require('./tree/Tree').TerminalNode;
-var ErrorNode = require('./tree/Tree').ErrorNode;
+import { Token } from './../Token';
+import {ParseTreeListener, TerminalNode, ErrorNode} from './tree/Tree';
+import { Recognizer} from './Recognizer';
+import {DefaultErrorStrategy} from './error/ErrorStrategy';
+import {ATNDeserializer} from './atn/ATNDeserializer';
+import {ATNDeserializationOptions} from './atn/ATNDeserializationOptions';
 
 function TraceListener(parser) {
 	ParseTreeListener.call(this);
@@ -294,7 +292,7 @@ Parser.prototype.getATNWithBypassAlts = function() {
 // String id = m.get("ID");
 // </pre>
 
-var Lexer = require('./Lexer').Lexer;
+import {Lexer} from './Lexer';
 
 Parser.prototype.compileParseTreePattern = function(pattern, patternRuleIndex, lexer) {
 	lexer = lexer || null;
@@ -671,4 +669,4 @@ Parser.prototype.setTrace = function(trace) {
 	}
 };
 
-exports.Parser = Parser;
+export { Parser }

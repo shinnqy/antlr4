@@ -9,18 +9,12 @@
 // utility methods for analyzing configuration sets for conflicts and/or
 // ambiguities.
 
-var Set = require('./../Utils').Set;
-var Map = require('./../Utils').Map;
-var BitSet = require('./../Utils').BitSet;
-var AltDict = require('./../Utils').AltDict;
-var ATN = require('./ATN').ATN;
-var RuleStopState = require('./ATNState').RuleStopState;
-var ATNConfigSet = require('./ATNConfigSet').ATNConfigSet;
-var ATNConfig = require('./ATNConfig').ATNConfig;
-var SemanticContext = require('./SemanticContext').SemanticContext;
-var Hash = require("../Utils").Hash;
-var hashStuff = require('./../Utils').hashStuff;
-var equalArrays = require('./../Utils').equalArrays;
+import {Map, Set, BitSet, AltDict, hashStuff, equalArrays, Hash} from './../Utils';
+import {ATN} from './ATN';
+import {RuleStopState} from './ATNState';
+import {ATNConfigSet} from './ATNConfigSet';
+import {ATNConfig} from './ATNConfig';
+import { SemanticContext} from './SemanticContext';
 
 function PredictionMode() {
 	return this;
@@ -556,4 +550,4 @@ PredictionMode.getSingleViableAlt = function(altsets) {
     return result;
 };
 
-exports.PredictionMode = PredictionMode;
+export { PredictionMode }

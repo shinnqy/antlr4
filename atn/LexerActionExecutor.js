@@ -12,8 +12,8 @@
 // efficiently, ensuring that actions appearing only at the end of the rule do
 // not cause bloating of the {@link DFA} created for the lexer.</p>
 
-var hashStuff = require("../Utils").hashStuff;
-var LexerIndexedCustomAction = require('./LexerAction').LexerIndexedCustomAction;
+import { hashStuff} from '../Utils';
+import {LexerIndexedCustomAction} from '.LexerAction';
 
 function LexerActionExecutor(lexerActions) {
 	this.lexerActions = lexerActions === null ? [] : lexerActions;
@@ -163,4 +163,4 @@ LexerActionExecutor.prototype.equals = function(other) {
 	}
 };
 
-exports.LexerActionExecutor = LexerActionExecutor;
+export { LexerActionExecutor }

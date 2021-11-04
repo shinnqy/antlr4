@@ -30,8 +30,8 @@
 // channel.</p>
 ///
 
-var Token = require('./Token').Token;
-var BufferedTokenStream = require('./BufferedTokenStream').BufferedTokenStream;
+import { Token } from './../Token';
+import {BufferedTokenStream} from './BufferedTokenStream';
 
 function CommonTokenStream(lexer, channel) {
 	BufferedTokenStream.call(this, lexer);
@@ -101,4 +101,4 @@ CommonTokenStream.prototype.getNumberOfOnChannelTokens = function() {
     return n;
 };
 
-exports.CommonTokenStream = CommonTokenStream;
+export { CommonTokenStream }

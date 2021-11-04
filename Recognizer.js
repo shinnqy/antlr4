@@ -5,9 +5,8 @@
  */
 //
 
-var Token = require('./Token').Token;
-var ConsoleErrorListener = require('./error/ErrorListener').ConsoleErrorListener;
-var ProxyErrorListener = require('./error/ErrorListener').ProxyErrorListener;
+import { Token } from './../Token';
+import {ConsoleErrorListener, ProxyErrorListener} from './error/ErrorListener';
 
 function Recognizer() {
     this._listeners = [ ConsoleErrorListener.INSTANCE ];
@@ -144,4 +143,4 @@ Object.defineProperty(Recognizer.prototype, "state", {
 });
 
 
-exports.Recognizer = Recognizer;
+export { Recognizer }

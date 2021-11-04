@@ -5,10 +5,10 @@
  */
 ///
 
-var DFAState = require('./../dfa/DFAState').DFAState;
-var ATNConfigSet = require('./ATNConfigSet').ATNConfigSet;
-var getCachedPredictionContext = require('./../PredictionContext').getCachedPredictionContext;
-var Map = require('./../Utils').Map;
+import {DFAState} from './../dfa/DFAState';
+import {ATNConfigSet} from './ATNConfigSet';
+import {getCachedPredictionContext} from './../PredictionContext';
+import {Map} from './../Utils';
 
 function ATNSimulator(atn, sharedContextCache) {
 
@@ -49,4 +49,4 @@ ATNSimulator.prototype.getCachedContext = function(context) {
     return getCachedPredictionContext(context, this.sharedContextCache, visited);
 };
 
-exports.ATNSimulator = ATNSimulator;
+export { ATNSimulator }

@@ -13,8 +13,7 @@
 //  {@link SemanticContext} within the scope of this outer class.</p>
 //
 
-var Set = require('./../Utils').Set;
-var Hash = require('./../Utils').Hash;
+import { Set, Hash} from './../Utils';
 
 function SemanticContext() {
 	return this;
@@ -399,6 +398,4 @@ OR.prototype.toString = function() {
 	return s.length > 3 ? s.slice(3) : s;
 };
 
-exports.SemanticContext = SemanticContext;
-exports.PrecedencePredicate = PrecedencePredicate;
-exports.Predicate = Predicate;
+export { SemanticContext, PrecedencePredicate, Predicate }

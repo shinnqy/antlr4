@@ -3,8 +3,9 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-var LL1Analyzer = require('./../LL1Analyzer').LL1Analyzer;
-var IntervalSet = require('./../IntervalSet').IntervalSet;
+import { LL1Analyzer} from './../LL1Analyzer';
+import {IntervalSet} from './../IntervalSet';
+import {Token} from './../Token';
 
 function ATN(grammarType , maxTokenType) {
 
@@ -109,7 +110,6 @@ ATN.prototype.getDecisionState = function( decision) {
 // specified state in the specified context.
 // @throws IllegalArgumentException if the ATN does not contain a state with
 // number {@code stateNumber}
-var Token = require('./../Token').Token;
 
 ATN.prototype.getExpectedTokens = function( stateNumber, ctx ) {
     if ( stateNumber < 0 || stateNumber >= this.states.length ) {
@@ -139,4 +139,4 @@ ATN.prototype.getExpectedTokens = function( stateNumber, ctx ) {
 
 ATN.INVALID_ALT_NUMBER = 0;
 
-exports.ATN = ATN;
+export { ATN }

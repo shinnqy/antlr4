@@ -10,7 +10,7 @@
 // {@link CommonToken} objects.
 //
 
-var CommonToken = require('./Token').CommonToken;
+import {CommonToken} from './Token';
 
 function TokenFactory() {
 	return this;
@@ -66,4 +66,4 @@ CommonTokenFactory.prototype.createThin = function(type, text) {
     return t;
 };
 
-exports.CommonTokenFactory = CommonTokenFactory;
+export { CommonTokenFactory }

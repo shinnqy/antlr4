@@ -5,8 +5,8 @@
  */
 ///
 
-var ATNConfigSet = require('./../atn/ATNConfigSet').ATNConfigSet;
-var Utils = require('./../Utils');
+import {ATNConfigSet} from './../atn/ATNConfigSet';
+import * as Utils from './../Utils';
 var Hash = Utils.Hash;
 var Set = Utils.Set;
 
@@ -142,5 +142,4 @@ DFAState.prototype.hashCode = function() {
     return hash.finish();
 };
 
-exports.DFAState = DFAState;
-exports.PredPrediction = PredPrediction;
+export { DFAState, PredPrediction }

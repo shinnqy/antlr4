@@ -233,36 +233,31 @@
 // the input.</p>
 //
 
-var Utils = require('./../Utils');
+import * as Utils from './../Utils';
 var Set = Utils.Set;
 var BitSet = Utils.BitSet;
 var DoubleDict = Utils.DoubleDict;
-var ATN = require('./ATN').ATN;
-var ATNState = require('./ATNState').ATNState;
-var ATNConfig = require('./ATNConfig').ATNConfig;
-var ATNConfigSet = require('./ATNConfigSet').ATNConfigSet;
-var Token = require('./../Token').Token;
-var DFAState = require('./../dfa/DFAState').DFAState;
-var PredPrediction = require('./../dfa/DFAState').PredPrediction;
-var ATNSimulator = require('./ATNSimulator').ATNSimulator;
-var PredictionMode = require('./PredictionMode').PredictionMode;
-var RuleContext = require('./../RuleContext').RuleContext;
-var ParserRuleContext = require('./../ParserRuleContext').ParserRuleContext;
-var SemanticContext = require('./SemanticContext').SemanticContext;
-var StarLoopEntryState = require('./ATNState').StarLoopEntryState;
-var RuleStopState = require('./ATNState').RuleStopState;
-var PredictionContext = require('./../PredictionContext').PredictionContext;
-var Interval = require('./../IntervalSet').Interval;
-var Transitions = require('./Transition');
+import {ATN} from './ATN';
+import {ATNState, ATNConfig, StarLoopEntryState, RuleStopState} from './ATNState';
+import {ATNConfigSet} from './ATNConfigSet';
+import { Token } from './../Token';
+import {DFAState} from './../dfa/DFAState';
+import {PredPrediction} from './../dfa/DFAState';
+import {ATNSimulator} from './ATNSimulator';
+import {PredictionMode} from './PredictionMode';
+import {RuleContext} from './../RuleContext';
+import {ParserRuleContext} from './../ParserRuleContext';
+import { SemanticContext} from './SemanticContext';
+import {PredictionContext} from './../PredictionContext';
+import { Interval } from './../IntervalSet';
+import * as Transition from './Transition';
 var Transition = Transitions.Transition;
 var SetTransition = Transitions.SetTransition;
 var NotSetTransition = Transitions.NotSetTransition;
 var RuleTransition = Transitions.RuleTransition;
 var ActionTransition = Transitions.ActionTransition;
-var NoViableAltException = require('./../error/Errors').NoViableAltException;
-
-var SingletonPredictionContext = require('./../PredictionContext').SingletonPredictionContext;
-var predictionContextFromRuleContext = require('./../PredictionContext').predictionContextFromRuleContext;
+import {NoViableAltException} from './../error/Errors';
+import {SingletonPredictionContext, predictionContextFromRuleContext} from './../PredictionContext';
 
 function ParserATNSimulator(parser, atn, decisionToDFA, sharedContextCache) {
 	ATNSimulator.call(this, atn, sharedContextCache);
@@ -1725,4 +1720,4 @@ ParserATNSimulator.prototype.reportAmbiguity = function(dfa, D, startIndex, stop
     }
 };
 
-exports.ParserATNSimulator = ParserATNSimulator;
+export { ParserATNSimulator }

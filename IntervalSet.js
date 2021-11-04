@@ -5,7 +5,7 @@
 
 /*jslint smarttabs:true */
 
-var Token = require('./Token').Token;
+import { Token } from './../Token';
 
 /* stop is not included! */
 function Interval(start, stop) {
@@ -294,5 +294,4 @@ IntervalSet.prototype.elementName = function(literalNames, symbolicNames, a) {
 	}
 };
 
-exports.Interval = Interval;
-exports.IntervalSet = IntervalSet;
+export { Interval, IntervalSet }

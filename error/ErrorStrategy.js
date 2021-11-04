@@ -5,15 +5,14 @@
  */
 //
 
-var Token = require('./../Token').Token;
-var Errors = require('./Errors');
+import { Token } from './../Token';
+import * as Errors from './Errors';
 var NoViableAltException = Errors.NoViableAltException;
 var InputMismatchException = Errors.InputMismatchException;
 var FailedPredicateException = Errors.FailedPredicateException;
 var ParseCancellationException = Errors.ParseCancellationException;
-var ATNState = require('./../atn/ATNState').ATNState;
-var Interval = require('./../IntervalSet').Interval;
-var IntervalSet = require('./../IntervalSet').IntervalSet;
+import {ATNState} from './../atn/ATNState';
+import { Interval, IntervalSet } from './../IntervalSet';
 
 function ErrorStrategy() {
 
@@ -752,5 +751,4 @@ BailErrorStrategy.prototype.sync = function(recognizer) {
     // pass
 };
 
-exports.BailErrorStrategy = BailErrorStrategy;
-exports.DefaultErrorStrategy = DefaultErrorStrategy;
+export { BailErrorStrategy, DefaultErrorStrategy }

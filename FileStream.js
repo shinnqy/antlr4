@@ -9,7 +9,7 @@
 //  This is an InputStream that is loaded from a file all at once
 //  when you construct the object.
 //
-var InputStream = require('./InputStream').InputStream;
+import {Lexer} from './Lexer';
 var isNodeJs = typeof window === 'undefined' && typeof importScripts === 'undefined';
 var fs = isNodeJs ? require("fs") : null;
 
@@ -23,4 +23,4 @@ function FileStream(fileName, decodeToUnicodeCodePoints) {
 FileStream.prototype = Object.create(InputStream.prototype);
 FileStream.prototype.constructor = FileStream;
 
-exports.FileStream = FileStream;
+export { FileStream }

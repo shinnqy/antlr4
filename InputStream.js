@@ -5,9 +5,9 @@
  */
 //
 
-var Token = require('./Token').Token;
-require('./polyfills/codepointat');
-require('./polyfills/fromcodepoint');
+import { Token } from './../Token';
+import './polyfills/codepointat';
+import './polyfills/fromcodepoint';
 
 // Vacuum all input from a string and then treat it like a buffer.
 
@@ -132,4 +132,4 @@ InputStream.prototype.toString = function() {
 	return this.strdata;
 };
 
-exports.InputStream = InputStream;
+export { InputStream }

@@ -2,22 +2,37 @@
  * Use of this file is governed by the BSD 3-clause license that
  * can be found in the LICENSE.txt file in the project root.
  */
-exports.atn = require('./atn/index');
-exports.codepointat = require('./polyfills/codepointat');
-exports.dfa = require('./dfa/index');
-exports.fromcodepoint = require('./polyfills/fromcodepoint');
-exports.tree = require('./tree/index');
-exports.error = require('./error/index');
-exports.Token = require('./Token').Token;
-exports.CharStreams = require('./CharStreams').CharStreams;
-exports.CommonToken = require('./Token').CommonToken;
-exports.InputStream = require('./InputStream').InputStream;
-exports.FileStream = require('./FileStream').FileStream;
-exports.CommonTokenStream = require('./CommonTokenStream').CommonTokenStream;
-exports.Lexer = require('./Lexer').Lexer;
-exports.Parser = require('./Parser').Parser;
-var pc = require('./PredictionContext');
-exports.PredictionContextCache = pc.PredictionContextCache;
-exports.ParserRuleContext = require('./ParserRuleContext').ParserRuleContext;
-exports.Interval = require('./IntervalSet').Interval;
-exports.Utils = require('./Utils');
+
+
+import * as atn from './atn/index';
+import * as codepointat from './polyfills/codepointa';
+import * as dfa from './dfa/index';
+import * as fromcodepoint from './polyfills/fromcodepoint';
+import * as tree from './tree/index';
+import * as error from './error/index';
+import * as Utils from './Utils';
+import * as pc from './PredictionContext';
+
+const PredictionContextCache = pc.PredictionContextCache;
+
+export {
+	atn,
+	codepointat,
+	dfa,
+	fromcodepoint,
+	tree,
+	error,
+	Utils,
+	pc,
+	PredictionContextCache,
+}
+
+export {Token, CommonToken} from './Token';
+export {CharStreams} from './CharStreams';
+export {InputStream} from './InputStream';
+export {FileStream} from './FileStream';
+export {CommonTokenStream} from './CommonTokenStream';
+export {Lexer} from './Lexer';
+export {Parser} from './Parser';
+export {ParserRuleContext} from './ParserRuleContext';
+export {Interval} from './IntervalSet';

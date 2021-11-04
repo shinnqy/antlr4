@@ -15,9 +15,9 @@
 // {@link Token//HIDDEN_CHANNEL}, use a filtering token stream such a
 // {@link CommonTokenStream}.</p>
 
-var Token = require('./Token').Token;
-var Lexer = require('./Lexer').Lexer;
-var Interval = require('./IntervalSet').Interval;
+import { Token } from './../Token';
+import {Lexer} from './Lexer';
+import {Interval} from './IntervalSet';
 
 // this is just to keep meaningful parameter types to Parser
 function TokenStream() {
@@ -372,4 +372,4 @@ BufferedTokenStream.prototype.fill = function() {
 	}
 };
 
-exports.BufferedTokenStream = BufferedTokenStream;
+export {BufferedTokenStream}

@@ -81,7 +81,6 @@ ProxyErrorListener.prototype.reportContextSensitivity = function(recognizer, dfa
 	this.delegates.map(function(d) { d.reportContextSensitivity(recognizer, dfa, startIndex, stopIndex, prediction, configs); });
 };
 
-exports.ErrorListener = ErrorListener;
-exports.ConsoleErrorListener = ConsoleErrorListener;
-exports.ProxyErrorListener = ProxyErrorListener;
+
+export { ErrorListener, ConsoleErrorListener, ProxyErrorListener }
 

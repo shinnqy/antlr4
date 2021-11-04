@@ -5,7 +5,7 @@
  */
 //
 
-var InputStream = require('./InputStream').InputStream;
+import {InputStream} from './InputStream';
 
 var isNodeJs = typeof window === 'undefined' && typeof importScripts === 'undefined';
 var fs = isNodeJs ? require("fs") : null;
@@ -68,4 +68,4 @@ var CharStreams = {
   }
 };
 
-exports.CharStreams = CharStreams;
+export {CharStreams}

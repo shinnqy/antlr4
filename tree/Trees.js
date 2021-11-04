@@ -3,14 +3,12 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-var Utils = require('./../Utils');
-var Token = require('./../Token').Token;
-var RuleNode = require('./Tree').RuleNode;
-var ErrorNode = require('./Tree').ErrorNode;
-var TerminalNode = require('./Tree').TerminalNode;
-var ParserRuleContext = require('./../ParserRuleContext').ParserRuleContext;
-var RuleContext = require('./../RuleContext').RuleContext;
-var INVALID_ALT_NUMBER = require('./../atn/ATN').INVALID_ALT_NUMBER;
+import * as Utils from './../Utils';
+import { Token } from './../Token';
+import {RuleNode, ErrorNode, TerminalNode} from './Tree';
+import {ParserRuleContext} from './../ParserRuleContext';
+import {RuleContext} from './../RuleContext';
+import {INVALID_ALT_NUMBER} from  './../atn/ATN';
 
 
 /** A set of utility routines useful for all kinds of ANTLR trees. */
@@ -137,4 +135,4 @@ Trees.descendants = function(t) {
 };
 
 
-exports.Trees = Trees;
+export {Trees }

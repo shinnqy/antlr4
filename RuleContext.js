@@ -25,9 +25,9 @@
 //  @see ParserRuleContext
 ///
 
-var RuleNode = require('./tree/Tree').RuleNode;
-var INVALID_INTERVAL = require('./tree/Tree').INVALID_INTERVAL;
-var INVALID_ALT_NUMBER = require('./atn/ATN').INVALID_ALT_NUMBER;
+import { RuleNode, INVALID_INTERVAL } from './tree/Tree';
+import {Trees} from './tree/Trees';
+import { INVALID_ALT_NUMBER} from './atn/ATN';
 
 function RuleContext(parent, invokingState) {
 	RuleNode.call(this);
@@ -118,9 +118,6 @@ RuleContext.prototype.accept = function(visitor) {
 };
 
 //need to manage circular dependencies, so export now
-exports.RuleContext = RuleContext;
-var Trees = require('./tree/Trees').Trees;
-
 
 // Print out a whole tree, not just a node, in LISP format
 // (root child1 .. childN). Print just a node if this is a leaf.
@@ -155,3 +152,4 @@ RuleContext.prototype.toString = function(ruleNames, stop) {
 	return s;
 };
 
+export { RuleContext }

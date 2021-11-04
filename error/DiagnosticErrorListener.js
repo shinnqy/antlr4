@@ -24,9 +24,9 @@
 // this situation occurs.</li>
 // </ul>
 
-var BitSet = require('./../Utils').BitSet;
-var ErrorListener = require('./ErrorListener').ErrorListener;
-var Interval = require('./../IntervalSet').Interval;
+import {BitSet} from './../Utils';
+import {ErrorListener} from './ErrorListener';
+import { Interval } from './../IntervalSet';
 
 function DiagnosticErrorListener(exactOnly) {
 	ErrorListener.call(this);
@@ -108,4 +108,4 @@ DiagnosticErrorListener.prototype.getConflictingAlts = function(reportedAlts, co
 	return "{" + result.values().join(", ") + "}";
 };
 
-exports.DiagnosticErrorListener = DiagnosticErrorListener;
+export { DiagnosticErrorListener }

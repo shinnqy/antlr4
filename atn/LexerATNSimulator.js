@@ -21,20 +21,18 @@
 //  can simply return the predicted token type.</p>
 ///
 
-var Token = require('./../Token').Token;
-var Lexer = require('./../Lexer').Lexer;
-var ATN = require('./ATN').ATN;
-var ATNSimulator = require('./ATNSimulator').ATNSimulator;
-var DFAState = require('./../dfa/DFAState').DFAState;
-var ATNConfigSet = require('./ATNConfigSet').ATNConfigSet;
-var OrderedATNConfigSet = require('./ATNConfigSet').OrderedATNConfigSet;
-var PredictionContext = require('./../PredictionContext').PredictionContext;
-var SingletonPredictionContext = require('./../PredictionContext').SingletonPredictionContext;
-var RuleStopState = require('./ATNState').RuleStopState;
-var LexerATNConfig = require('./ATNConfig').LexerATNConfig;
-var Transition = require('./Transition').Transition;
-var LexerActionExecutor = require('./LexerActionExecutor').LexerActionExecutor;
-var LexerNoViableAltException = require('./../error/Errors').LexerNoViableAltException;
+import { Token } from './../Token';
+import {Lexer} from './../Lexer';
+import {ATN} from './ATN';
+import {ATNSimulator} from './ATNSimulator';
+import {DFAState} from './../dfa/DFAState';
+import {ATNConfigSet, OrderedATNConfigSet} from './ATNConfigSet';
+import {PredictionContext, SingletonPredictionContext} from './../PredictionContext';
+import {RuleStopState} from './ATNState';
+import {LexerATNConfig} from './ATNConfig';
+import {Transition} from './Transition';
+import {LexerActionExecutor} from './LexerActionExecutor';
+import {LexerNoViableAltException} from './../error/Errors';
 
 function resetSimState(sim) {
 	sim.index = -1;
@@ -633,4 +631,5 @@ LexerATNSimulator.prototype.getTokenName = function(tt) {
 	}
 };
 
-exports.LexerATNSimulator = LexerATNSimulator;
+
+export { LexerATNSimulator }

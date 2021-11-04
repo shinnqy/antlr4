@@ -8,11 +8,10 @@
 //  lexer grammars result in a subclass of this object. A Lexer object
 //  uses simplified match() and error recovery mechanisms in the interest of speed.
 
-var Token = require('./Token').Token;
-var Recognizer = require('./Recognizer').Recognizer;
-var CommonTokenFactory = require('./CommonTokenFactory').CommonTokenFactory;
-var RecognitionException  = require('./error/Errors').RecognitionException;
-var LexerNoViableAltException = require('./error/Errors').LexerNoViableAltException;
+import { Token } from './../Token';
+import { Recognizer} from './Recognizer';
+import {CommonTokenFactory} from './CommonTokenFactory';
+import {RecognitionException,LexerNoViableAltException } from './error/Errors';
 
 function TokenSource() {
 	return this;
@@ -368,4 +367,4 @@ Lexer.prototype.recover = function(re) {
 	}
 };
 
-exports.Lexer = Lexer;
+export { Lexer }

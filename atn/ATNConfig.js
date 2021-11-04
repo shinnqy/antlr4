@@ -13,9 +13,9 @@
 //  an ATN state.
 ///
 
-var DecisionState = require('./ATNState').DecisionState;
-var SemanticContext = require('./SemanticContext').SemanticContext;
-var Hash = require("../Utils").Hash;
+import {DecisionState} from './ATNState';
+import {SemanticContext} from './SemanticContext';
+import {Hash} from '../Utils';
 
 
 function checkParams(params, isCfg) {
@@ -172,5 +172,4 @@ LexerATNConfig.prototype.checkNonGreedyDecision = function(source, target) {
         (target instanceof DecisionState) && target.nonGreedy;
 };
 
-exports.ATNConfig = ATNConfig;
-exports.LexerATNConfig = LexerATNConfig;
+export {ATNConfig, LexerATNConfig};

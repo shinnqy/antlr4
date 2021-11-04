@@ -4,12 +4,11 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-var Set = require("../Utils").Set;
-var DFAState = require('./DFAState').DFAState;
-var StarLoopEntryState = require('../atn/ATNState').StarLoopEntryState;
-var ATNConfigSet = require('./../atn/ATNConfigSet').ATNConfigSet;
-var DFASerializer = require('./DFASerializer').DFASerializer;
-var LexerDFASerializer = require('./DFASerializer').LexerDFASerializer;
+import { Set} from '../Utils';
+import {DFAState} from './DFAState';
+import {StarLoopEntryState} from '../atn/ATNState';
+import {ATNConfigSet} from './../atn/ATNConfigSet';
+import {DFASerializer,LexerDFASerializer} from './DFASerializer';
 
 
 
@@ -150,4 +149,4 @@ DFA.prototype.toLexerString = function() {
 	return serializer.toString();
 };
 
-exports.DFA = DFA;
+export {DFA}

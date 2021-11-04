@@ -22,4 +22,4 @@ ATNDeserializationOptions.defaultOptions.readOnly = true;
 //            raise Exception("The object is read only.")
 //        super(type(self), self).__setattr__(key,value)
 
-exports.ATNDeserializationOptions = ATNDeserializationOptions;
+export { ATNDeserializationOptions }

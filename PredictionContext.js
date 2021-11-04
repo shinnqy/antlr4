@@ -5,9 +5,8 @@
  */
 ///
 
-var RuleContext = require('./RuleContext').RuleContext;
-var Hash = require('./Utils').Hash;
-var Map = require('./Utils').Map;
+import { RuleContext } from './RuleContext';
+import {Hash, Map} from './Utils';
 
 function PredictionContext(cachedHashCode) {
 	this.cachedHashCode = cachedHashCode;
@@ -726,9 +725,11 @@ function getAllContextNodes(context, nodes, visited) {
 	}
 }
 
-exports.merge = merge;
-exports.PredictionContext = PredictionContext;
-exports.PredictionContextCache = PredictionContextCache;
-exports.SingletonPredictionContext = SingletonPredictionContext;
-exports.predictionContextFromRuleContext = predictionContextFromRuleContext;
-exports.getCachedPredictionContext = getCachedPredictionContext;
+export {
+	merge,
+	PredictionContext,
+	PredictionContextCache,
+	SingletonPredictionContext,
+	predictionContextFromRuleContext,
+	getCachedPredictionContext,
+}

@@ -74,6 +74,6 @@ LexerDFASerializer.prototype.getEdgeLabel = function(i) {
 	return "'" + String.fromCharCode(i) + "'";
 };
 
-exports.DFASerializer = DFASerializer;
-exports.LexerDFASerializer = LexerDFASerializer;
+
+export {DFASerializer,LexerDFASerializer }
 
