@@ -5,7 +5,7 @@
 
 /*jslint smarttabs:true */
 
-import { Token } from './../Token';
+import { Token } from './Token';
 
 /* stop is not included! */
 function Interval(start, stop) {

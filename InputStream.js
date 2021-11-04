@@ -5,7 +5,7 @@
  */
 //
 
-import { Token } from './../Token';
+import { Token } from './Token';
 import './polyfills/codepointat';
 import './polyfills/fromcodepoint';
 

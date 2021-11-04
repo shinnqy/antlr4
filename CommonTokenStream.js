@@ -30,7 +30,7 @@
 // channel.</p>
 ///
 
-import { Token } from './../Token';
+import { Token } from './Token';
 import {BufferedTokenStream} from './BufferedTokenStream';
 
 function CommonTokenStream(lexer, channel) {

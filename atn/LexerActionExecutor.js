@@ -13,7 +13,7 @@
 // not cause bloating of the {@link DFA} created for the lexer.</p>
 
 import { hashStuff} from '../Utils';
-import {LexerIndexedCustomAction} from '.LexerAction';
+import {LexerIndexedCustomAction} from './LexerAction';
 
 function LexerActionExecutor(lexerActions) {
 	this.lexerActions = lexerActions === null ? [] : lexerActions;

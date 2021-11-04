@@ -6,8 +6,8 @@
 import { Token } from './../Token';
 import {ATN} from './ATN';
 import { ATNType} from './ATNType';
-import * as ATNState from './ATNState';
-import * as Transition from './Transition';
+import * as ATNStates  from './ATNState';
+import * as Transitions from './Transition';
 var ATNState = ATNStates.ATNState;
 var BasicState = ATNStates.BasicState;
 var DecisionState = ATNStates.DecisionState;
@@ -34,10 +34,9 @@ var EpsilonTransition = Transitions.EpsilonTransition;
 var WildcardTransition = Transitions.WildcardTransition;
 var PredicateTransition = Transitions.PredicateTransition;
 var PrecedencePredicateTransition = Transitions.PrecedencePredicateTransition;
-var IntervalSet = require('./../IntervalSet').IntervalSet;
-import { Interval } from './../IntervalSet';
-var ATNDeserializationOptions = require('./ATNDeserializationOptions').ATNDeserializationOptions;
-var LexerActions = require('./LexerAction');
+import { Interval, IntervalSet } from './../IntervalSet';
+import {ATNDeserializationOptions} from './ATNDeserializationOptions';
+import * as LexerActions from './LexerAction'
 var LexerActionType = LexerActions.LexerActionType;
 var LexerSkipAction = LexerActions.LexerSkipAction;
 var LexerChannelAction = LexerActions.LexerChannelAction;

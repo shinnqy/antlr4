@@ -8,7 +8,7 @@
 //  lexer grammars result in a subclass of this object. A Lexer object
 //  uses simplified match() and error recovery mechanisms in the interest of speed.
 
-import { Token } from './../Token';
+import { Token } from './Token';
 import { Recognizer} from './Recognizer';
 import {CommonTokenFactory} from './CommonTokenFactory';
 import {RecognitionException,LexerNoViableAltException } from './error/Errors';

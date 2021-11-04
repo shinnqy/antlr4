@@ -6,11 +6,11 @@
 ///
 
 import { Set, BitSet } from './Utils';
-import { Token } from './../Token';
+import { Token } from './Token';
 import {ATNConfig} from './atn/ATNConfig';
 import { IntervalSet } from './IntervalSet';
 import {RuleStopState} from './atn/ATNState';
-import {RuleTransition, NotSetTransition, WildcardTransition, WildcardTransition, AbstractPredicateTransition} from './atn/Transition';
+import {RuleTransition, NotSetTransition, WildcardTransition, AbstractPredicateTransition} from './atn/Transition';
 
 import * as pc from './PredictionContext';
 var predictionContextFromRuleContext = pc.predictionContextFromRuleContext;

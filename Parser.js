@@ -3,7 +3,7 @@
  * can be found in the LICENSE.txt file in the project root.
  */
 
-import { Token } from './../Token';
+import { Token } from './Token';
 import {ParseTreeListener, TerminalNode, ErrorNode} from './tree/Tree';
 import { Recognizer} from './Recognizer';
 import {DefaultErrorStrategy} from './error/ErrorStrategy';

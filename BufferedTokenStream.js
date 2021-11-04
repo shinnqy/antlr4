@@ -15,7 +15,7 @@
 // {@link Token//HIDDEN_CHANNEL}, use a filtering token stream such a
 // {@link CommonTokenStream}.</p>
 
-import { Token } from './../Token';
+import { Token } from './Token';
 import {Lexer} from './Lexer';
 import {Interval} from './IntervalSet';
 

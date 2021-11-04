@@ -5,7 +5,7 @@
  */
 //
 
-import { Token } from './../Token';
+import { Token } from './Token';
 import {ConsoleErrorListener, ProxyErrorListener} from './error/ErrorListener';
 
 function Recognizer() {

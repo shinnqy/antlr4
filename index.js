@@ -5,7 +5,7 @@
 
 
 import * as atn from './atn/index';
-import * as codepointat from './polyfills/codepointa';
+import * as codepointat from './polyfills/codepointat';
 import * as dfa from './dfa/index';
 import * as fromcodepoint from './polyfills/fromcodepoint';
 import * as tree from './tree/index';

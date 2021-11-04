@@ -12,7 +12,6 @@
 
 import {ATN} from './ATN';
 import * as Utils from './../Utils';
-import * as Utils from './../Utils';
 var Hash = Utils.Hash;
 var Set = Utils.Set;
 import { SemanticContext} from './SemanticContext';
