@@ -138,5 +138,6 @@ ATN.prototype.getExpectedTokens = function( stateNumber, ctx ) {
 };
 
 ATN.INVALID_ALT_NUMBER = 0;
+const INVALID_ALT_NUMBER = 0;
 
 export { ATN, INVALID_ALT_NUMBER }
